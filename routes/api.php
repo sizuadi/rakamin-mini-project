@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +22,12 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::post('/refresh', [AuthController::class, 'refresh']);
 Route::post('/me', [AuthController::class, 'me']);
 
-// Chat
-Route::middleware(['auth'])->prefix('chat')
-->group(function () {
-           
+Route::middleware(['auth'])
+        ->group(function () {
+        
+        // Chat
+        Route::prefix('chat')->group(function () {
+            Route::get('/', [ChatController::class, 'index']);
+            Route::post('/', [ChatController::class, 'store']);
+        });
 });
