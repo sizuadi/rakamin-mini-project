@@ -50,10 +50,10 @@ jowar / joko@example.com
 
 | Method    | URI                             |  Action                  | Params                  |
 |-----------|---------------------------------|--------------------------|--------------------------|
-| POST       | api/login | App\Http\Controllers\AuthController@login  | email/username, password|
+| POST       | api/login | App\Http\Controllers\AuthController@login  | <code>email/username</code>, <code>password</code>|
 | POST       | api/logout | App\Http\Controllers\AuthController@logout  | |
 | POST       | api/refresh | App\Http\Controllers\AuthController@refresh | | 
 | POST       | api/me | App\Http\Controllers\AuthController@me  | |
-| GET        | api/chat | App\Http\Controllers\ChatController@index  | id (to read chat) |
-| POST       | api/chat | App\Http\Controllers\ChatController@store  | user_id (user you want to chat), messages, reply_id (id chat_messages you want to reply) |
+| GET        | api/chat | App\Http\Controllers\ChatController@index  | <code>id</code> (to read chat) |
+| POST       | api/chat | App\Http\Controllers\ChatController@store  | <code>user_id</code> (user you want to chat), <code>messages</code>, <code>reply_id</code> (id chat_messages you want to reply) |
 
