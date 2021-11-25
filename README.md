@@ -49,8 +49,8 @@ jowar / joko@example.com
 ## Route list
 
 | Method    | URI                             |  Action                  | Params                  |
-|-----------|---------------------------------|--------------------------| email/username, password|
-| POST       | api/login | App\Http\Controllers\AuthController@login  | |
+|-----------|---------------------------------|--------------------------|--------------------------|
+| POST       | api/login | App\Http\Controllers\AuthController@login  | email/username, password|
 | POST       | api/logout | App\Http\Controllers\AuthController@logout  | |
 | POST       | api/refresh | App\Http\Controllers\AuthController@refresh | | 
 | POST       | api/me | App\Http\Controllers\AuthController@me  | |
