@@ -35,15 +35,16 @@
 
 ## Credentials
 - Username / Email : 
-andi.adinata / andi.adinata@example.com 
-bimo.satria / bimo.satria@example.com 
-caca / cacaa@example.com
+andi.adinata / andi.adinata@example.com,
+bimo.satria / bimo.satria@example.com,
+caca / cacaa@example.com,
 jowar / joko@example.com
 
 - Password : 123456
 
 ## Postman Doc API
-https://www.getpostman.com/collections/e36e24173f980692cebc
+- Via JSON : https://www.getpostman.com/collections/e36e24173f980692cebc
+- Via Postman Workspace : https://www.postman.com/planetary-equinox-119920/workspace/rakamin-mini-project/collection/8302287-1452aaba-29c0-4d00-a152-d583b6e7b715
 
 ## Route list
 
