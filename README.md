@@ -35,9 +35,9 @@
 
 ## Credentials
 - Username / Email : 
-andi.adinata / andi.adinata@example.com 
-bimo.satria / bimo.satria@example.com 
-caca / cacaa@example.com
+andi.adinata / andi.adinata@example.com,
+bimo.satria / bimo.satria@example.com,
+caca / cacaa@example.com,
 jowar / joko@example.com
 
 - Password : 123456
