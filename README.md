@@ -48,12 +48,12 @@ jowar / joko@example.com
 
 ## Route list
 
-| Method    | URI                             |  Action                  |
-|-----------|---------------------------------|--------------------------|
-| POST       | api/login | App\Http\Controllers\AuthController@login  |
-| POST       | api/logout | App\Http\Controllers\AuthController@logout  |
-| POST       | api/refresh | App\Http\Controllers\AuthController@refresh |
-| POST       | api/me | App\Http\Controllers\AuthController@me  |
-| GET        | api/chat | App\Http\Controllers\ChatController@index  |
-| POST       | api/chat | App\Http\Controllers\ChatController@store  |
+| Method    | URI                             |  Action                  | Params                  |
+|-----------|---------------------------------|--------------------------| email/username, password|
+| POST       | api/login | App\Http\Controllers\AuthController@login  | |
+| POST       | api/logout | App\Http\Controllers\AuthController@logout  | |
+| POST       | api/refresh | App\Http\Controllers\AuthController@refresh | | 
+| POST       | api/me | App\Http\Controllers\AuthController@me  | |
+| GET        | api/chat | App\Http\Controllers\ChatController@index  | id (to read chat) |
+| POST       | api/chat | App\Http\Controllers\ChatController@store  | user_id (user you want to chat), messages, reply_id (id chat_messages you want to reply) |
 
