@@ -18,12 +18,6 @@ class ChatController extends Controller
         try {
             $chat = Chat::where('user_one', $request->user()->id)
                         ->orWhere('user_two', $request->user()->id);
-
-            if ($request->has('key') && $request->key != 'null') {
-                $chat->where(function ($query) use ($request) {
-                    $query->orWhereRaw("lower(chats.id) like '%" . strtolower($request->key) . "%'");
-                });
-            }
             
             if ($request->has('id') && is_numeric($request->id)) {
                 $chat      = Chat::findOrFail($request->id);
@@ -39,14 +33,10 @@ class ChatController extends Controller
 
             $total = $chat->count();
 
-            if ($request->has('limit') && is_numeric($request->limit)){
-                $chat = $chat->paginate(($request->limit == 0 ? $total : $request->limit));
-            } else {
-                $chat = $chat->get();
-                $chat = $chat->sortBy(function($chat){
-                            return $chat->col_user;
-                        });
-            }
+            $chat = $chat->get();
+            $chat = $chat->sortBy(function($chat){
+                        return $chat->col_user;
+                    });
 
             $return = [
                 "rows"      => $chat,
